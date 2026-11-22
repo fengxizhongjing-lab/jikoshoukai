@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中井 楓稀 | 自己紹介</title>
+  <style>
+    /* カラーパレットと基本設定 */
+    :root {
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #1e293b;
+      --text-sub: #64748b;
+      --accent-primary: #6a1b9a; /* サブアクセント（ディープパープル） */
+      --accent-secondary: #2e7d32;   /* メインアクセント（落ち着いたグリーン） */
+      --border-color: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 20px 16px;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* スマホで読みやすいカード幅に制限 */
+    .container {
+      width: 100%;
+      max-width: 480px;
+      background-color: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    /* 上部アクセントバー */
+    .top-bar {
+      height: 6px;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    }
+
+    .content {
+      padding: 32px 24px;
+    }
+
+    /* プロフィールヘッダー */
+    .profile-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent-primary);
+      margin-bottom: 16px;
+      background-color: #e2e8f0;
+    }
+
+    .name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .role {
+      font-size: 0.9rem;
+      color: var(--accent-secondary);
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    /* セクション共通 */
+    section {
+      margin-bottom: 28px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-primary);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+
+    /* スキルタグ */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-size: 0.85rem;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+    }
+
+    /* 実績・経歴リスト */
+    .timeline {
+      list-style: none;
+    }
+
+    .timeline li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+    }
+
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--accent-secondary);
+    }
+
+    .timeline-date {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-sub);
+    }
+
+    /* リンクボタン群 */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .link-btn {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: opacity 0.2s, transform 0.1s;
+    }
+
+    .link-btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-primary {
+      background-color: var(--accent-primary);
+      color: #ffffff;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+
+    .link-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* フッター */
+    footer {
+      text-align: center;
+      padding: 16px;
+      font-size: 0.75rem;
+      color: var(--text-sub);
+      border-top: 1px solid var(--border-color);
+      background-color: var(--bg-color);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <div class="top-bar"></div>
+    
+    <div class="content">
+      <!-- プロフィールヘッダー -->
+      <header class="profile-header">
+        <!-- 画像を用意したら src="" にパスを指定してください -->
+        <img src="images/1763286535597~2.jpg" alt="プロフィールアイコン" class="avatar">
+        <h1 class="name">中井 楓稀</h1>
+        <p class="role">摂南大学 / 法学部法律学科</p>
+      </header>
+
+      <!-- 自己紹介文 -->
+      <section>
+        <h2>About</h2>
+        <p>
+          2003年9月13日土曜日 午後8時6分誕生。体重3770g。<br>
+          座右の銘は「悪は延べよ」。
+　　　　　<br>好きな音楽は「One more time,One more chance」。<br>好きな映画は「秒速5センチメートル」。
+　　　　　<br>好きなアニメは「ジョジョの奇妙な冒険」。        </p>
+      </section>
+
+      <!-- スキル・関心領域 -->
+      <section>
+        <h2>Skills &amp; Interests</h2>
+        <div class="tags">
+          <span class="tag">Google Spread Sheet / Google Apps Script</span>
+          <span c"lass=""tag"">音楽・映画・アニメ</span>
+          <span class=""tag"">サイクリング</span>
+        </div>
+      </section>
+
+      <!-- 経歴・制作物 -->
+      <section>
+        <h2>Works &amp; Background</h2>
+        <ul class=""timeline"">
+          <li>
+            <span class=""timeline-date"">2021.04 - 現在</span>
+            摂南大学　在籍          </li>
+          <li>
+            <span class=""timeline-date"">2023.04 - 2024.09</span>
+            前年度成績不良のため、半期休学。一流の男になる。          </li>
+          <li>
+            <span class=""timeline-date"">制作物</span>
+            ボードゲーム成績管理ツール（GAS / スプレッドシート連携）　　　　　</li>
+          <li>
+            <span class=""timeline-date"">制作物</span>
+            国語テスト問題生成ツール（GAS / スプレッドシート連携）
+          </li>
+        </ul>
+      </section>
+
+      <!-- 外部リンク・連絡先 -->
+<section>
+  <h2>Links &amp; Contact</h2>
+  <div class="links">
+    <a href="https://www.instagram.com/eveking_ooo913/" target="_blank" rel="noopener noreferrer" class="link-btn btn-outline">Instagram</a>
+    <a href="mailto:fengxizhongjing@gmail.com" class="link-btn btn-outline">Gメール</a>
+  </div>
+      </section>
+    </div>
+
+    <footer>
+      &copy; 2026 Eveki Nakai 
+    </footer>
+  </main>
+
+</body>
+</html>"
